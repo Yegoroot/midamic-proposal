@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MIDAMIC BMS Platform</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap">
+<style>
+  :root{
+    --bg:#f4f6f7;
+    --surface:#ffffff;
+    --fg:#1a232b;
+    --muted:#5b6a75;
+    --line:#dde3e7;
+    --accent:#b45309;
+    --accent-soft:#f6ebdd;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#10161c; --surface:#171f27; --fg:#e7edf2; --muted:#93a2ad;
+      --line:#2a3540; --accent:#e3a04b; --accent-soft:#2b2317; color-scheme:dark;
+    }
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:var(--bg); color:var(--fg);
+    font-family:"IBM Plex Sans","IBM Plex Sans Arabic",system-ui,sans-serif;
+    font-size:15.5px; line-height:1.6;
+    padding:0 16px 56px;
+  }
+  .wrap{max-width:860px; margin:0 auto}
+  .ar{font-family:"IBM Plex Sans Arabic","IBM Plex Sans",system-ui,sans-serif}
+
+  header{padding:52px 0 36px; border-bottom:2px solid var(--fg)}
+  .eyebrow{font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); font-weight:600; margin:0 0 14px}
+  h1{font-size:clamp(28px,5vw,40px); line-height:1.15; margin:0 0 6px; font-weight:700; text-wrap:balance}
+  .h1-ar{font-size:clamp(20px,3.6vw,26px); font-weight:600; color:var(--muted); margin:0 0 20px}
+  .meta{display:flex; flex-wrap:wrap; gap:8px 24px; font-size:13.5px; color:var(--muted)}
+  .meta b{color:var(--fg); font-weight:600}
+
+  h2{font-size:13px; letter-spacing:.12em; text-transform:uppercase; color:var(--accent); font-weight:600; margin:44px 0 16px}
+  .bi{display:grid; grid-template-columns:1fr 1fr; gap:20px 36px}
+  .bi p{margin:0; max-width:34em}
+  @media (max-width:640px){ .bi{grid-template-columns:1fr} }
+
+  .features{display:grid; grid-template-columns:1fr 1fr; gap:10px; list-style:none; margin:0; padding:0}
+  @media (max-width:640px){ .features{grid-template-columns:1fr} }
+  .features li{
+    background:var(--surface); border:1px solid var(--line); border-radius:6px;
+    padding:14px 16px; display:grid; gap:4px;
+  }
+  .features .en{font-weight:600}
+  .features .ar{color:var(--muted); font-size:14px}
+
+  .phases{display:grid; border:1px solid var(--line); border-radius:6px; overflow:hidden; background:var(--surface)}
+  .phase{display:grid; grid-template-columns:44px 1fr auto; gap:4px 16px; padding:16px 18px; align-items:baseline}
+  .phase + .phase{border-top:1px solid var(--line)}
+  .phase .num{font-weight:700; color:var(--accent); font-size:20px; font-variant-numeric:tabular-nums}
+  .phase .what{min-width:0}
+  .phase .what .en{font-weight:600}
+  .phase .what .ar{color:var(--muted); font-size:14px}
+  .phase .dur{font-weight:600; white-space:nowrap; background:var(--accent-soft); color:var(--accent); border-radius:999px; padding:3px 12px; font-size:13px}
+  @media (max-width:640px){
+    .phase{grid-template-columns:44px 1fr}
+    .phase .dur{grid-column:2; justify-self:start}
+  }
+
+  .note{font-size:13.5px; color:var(--muted); margin:14px 0 0}
+
+  .next{background:var(--surface); border:1px solid var(--line); border-left:4px solid var(--accent); border-radius:6px; padding:20px 22px; margin-top:44px}
+  .next ol{margin:8px 0 0; padding-left:20px}
+  .next li{margin:4px 0}
+  .contact{margin-top:18px; padding-top:14px; border-top:1px solid var(--line); font-size:14px; color:var(--muted)}
+  .contact b{color:var(--fg)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <p class="eyebrow">Proposal · عرض فني</p>
+    <h1>MIDAMIC BMS — Building Management Platform</h1>
+    <p class="h1-ar ar" dir="rtl">منصة ميداميك لإدارة المباني (BMS)</p>
+    <div class="meta">
+      <span>Prepared for <b>MIDAMIC</b> — Engineering Solutions &amp; Asset Management, Al&nbsp;Madinah, KSA</span>
+      <span>October 2026</span>
+    </div>
+  </header>
+
+  <h2>The offer · العرض</h2>
+  <div class="bi">
+    <p>Your own BMS software platform under the MIDAMIC brand: central monitoring and control of building systems — HVAC, electrical, fire alarm, energy — across all your clients' sites, from one bilingual (Arabic / English) dashboard. We build it on a proven industrial open-source core, adapted and branded for MIDAMIC, so you own the platform without paying per-building license fees to foreign vendors.</p>
+    <p class="ar" dir="rtl">منصة BMS برمجية خاصة بكم تحت علامة ميداميك: مراقبة وتحكم مركزيان في أنظمة المباني — التكييف والتهوية، والكهرباء، وإنذار الحريق، والطاقة — في جميع مواقع عملائكم، من لوحة تحكم واحدة ثنائية اللغة (عربي / إنجليزي). نبنيها على نواة صناعية مفتوحة المصدر ومجرَّبة، تُكيَّف وتُعلَّم بعلامة ميداميك، فتمتلكون المنصة دون رسوم ترخيص لكل مبنى تُدفع لمورّدين أجانب.</p>
+  </div>
+
+  <h2>What's inside · المحتوى</h2>
+  <ul class="features">
+    <li><span class="en">Live dashboard of all buildings and systems</span><span class="ar" dir="rtl">لوحة مراقبة حيّة لجميع المباني والأنظمة</span></li>
+    <li><span class="en">Equipment connection via BACnet, Modbus, MQTT</span><span class="ar" dir="rtl">ربط المعدات عبر BACnet وModbus وMQTT</span></li>
+    <li><span class="en">Alarms and instant notifications</span><span class="ar" dir="rtl">الإنذارات والتنبيهات الفورية</span></li>
+    <li><span class="en">Energy monitoring and consumption reports</span><span class="ar" dir="rtl">مراقبة الطاقة وتقارير الاستهلاك</span></li>
+    <li><span class="en">Multi-client: separate access per building owner</span><span class="ar" dir="rtl">تعدد العملاء: وصول مستقل لكل مالك مبنى</span></li>
+    <li><span class="en">Maintenance module: work orders from alarms (Phase 2)</span><span class="ar" dir="rtl">وحدة الصيانة: أوامر عمل من الإنذارات (المرحلة الثانية)</span></li>
+  </ul>
+
+  <h2>Timeline · الجدول الزمني</h2>
+  <div class="phases">
+    <div class="phase">
+      <span class="num">1</span>
+      <span class="what"><span class="en">Pilot — platform setup, MIDAMIC branding, one building connected, dashboards &amp; alarms</span><br><span class="ar" dir="rtl">المرحلة التجريبية — إعداد المنصة، هوية ميداميك، ربط مبنى واحد، لوحات المراقبة والإنذارات</span></span>
+      <span class="dur">6–8 weeks · أسابيع</span>
+    </div>
+    <div class="phase">
+      <span class="num">2</span>
+      <span class="what"><span class="en">Rollout — more sites, energy reports, maintenance module</span><br><span class="ar" dir="rtl">التوسّع — مواقع إضافية، تقارير الطاقة، وحدة الصيانة</span></span>
+      <span class="dur">4–6 weeks · أسابيع</span>
+    </div>
+    <div class="phase">
+      <span class="num">3</span>
+      <span class="what"><span class="en">Hosting, training &amp; technical support</span><br><span class="ar" dir="rtl">الاستضافة والتدريب والدعم الفني</span></span>
+      <span class="dur">Ongoing · مستمر</span>
+    </div>
+  </div>
+  <p class="note">A branded demo with live data is shown within the first 3 weeks. · تُعرض نسخة تجريبية بهوية ميداميك وبيانات حيّة خلال أول ثلاثة أسابيع.</p>
+
+  <h2>Investment · الاستثمار</h2>
+  <div class="bi">
+    <p>The pilot is delivered at a fixed price agreed after a short scoping call and a survey of the first building's equipment; hosting and support are billed monthly. No per-building license fees.</p>
+    <p class="ar" dir="rtl">تُنفَّذ المرحلة التجريبية بسعر ثابت يُتفق عليه بعد اجتماع قصير لتحديد النطاق ومعاينة معدات المبنى الأول، وتُحسب الاستضافة والدعم شهريًا. دون رسوم ترخيص لكل مبنى.</p>
+  </div>
+
+  <div class="next">
+    <strong>Next step · الخطوة التالية</strong>
+    <ol>
+      <li>30-minute call to review priorities · اجتماع ٣٠ دقيقة لمراجعة الأولويات</li>
+      <li>Survey of the pilot building's systems · معاينة أنظمة المبنى التجريبي</li>
+      <li>Fixed quote, then development starts · عرض سعر ثابت ثم يبدأ التطوير</li>
+    </ol>
+    <p class="contact"><b>[Company name]</b> · [Email] · [Phone]</p>
+  </div>
+</div>
+</body>
+</html>
